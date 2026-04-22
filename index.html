@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I'm Sorry</title>
+    <title>I'm Sorry 🥺</title>
     <style>
         body {
             margin: 0;
@@ -13,12 +13,12 @@
             align-items: center;
             height: 100vh;
             background-color: #ffe4e1;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow: hidden;
             text-align: center;
         }
 
-        /* Background Image - Cute Cat with Flower Vibe */
+        /* Background Image - Cute Cat Vibe */
         .bg-image {
             position: fixed;
             top: 0;
@@ -37,6 +37,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             z-index: 1;
             max-width: 400px;
+            position: relative;
         }
 
         h1 { color: #d63384; font-size: 2rem; margin-bottom: 10px; }
@@ -47,6 +48,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            height: 50px; /* Space for buttons */
         }
 
         button {
@@ -56,49 +58,25 @@
             border-radius: 50px;
             cursor: pointer;
             font-weight: bold;
-            transition: transform 0.1s;
         }
 
         #yesBtn {
             background-color: #ff4d6d;
             color: white;
-            z-index: 2;
+            transition: transform 0.2s;
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.1);
         }
 
         #noBtn {
             background-color: #888;
             color: white;
-            position: absolute;
+            position: absolute; /* Essential for moving */
+            transition: all 0.1s ease-out;
+            white-space: nowrap;
         }
 
         /* Success Screen */
-        .success-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #ffb6c1; /* Soft Pink */
-            z-index: 10;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .success-overlay h2 {
-            font-size: 4rem;
-            color: white;
-            text-shadow: 2px 2px 15px rgba(0,0,0,0.2);
-        }
-
-        .heart {
-            position: absolute;
-            color: #ff4d6d;
-            font-size: 2.5rem;
-            animation: float 3s linear infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(110vh) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-10vh) rotate(360deg);
+        .success
